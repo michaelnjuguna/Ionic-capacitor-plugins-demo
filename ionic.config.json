@@ -1,0 +1,7 @@
+{
+  "name": "plugins-demo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
