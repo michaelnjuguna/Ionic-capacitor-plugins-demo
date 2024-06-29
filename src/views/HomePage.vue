@@ -9,6 +9,7 @@
 
   // Import share plugin
   import { Share } from "@capacitor/share";
+  import { Browser } from "@capacitor/browser";
 
   // Create share function
 
@@ -18,6 +19,13 @@
       text: "Subscribe to my youtube channel",
       url: "https://youtube.com",
       dialogTitle: "Subscribe",
+    });
+  };
+
+  // Create  browser function
+  const openBrowser = async () => {
+    await Browser.open({
+      url: "https://michael-njuguna-developer.netlify.app/",
     });
   };
 </script>
@@ -41,6 +49,9 @@
         <ion-button expand="block" color="danger" @click="share"
           >Subscribe</ion-button
         >
+        <ion-button expand="block" color="primary" @click="openBrowser">
+          Open
+        </ion-button>
       </div>
     </ion-content>
   </ion-page>
